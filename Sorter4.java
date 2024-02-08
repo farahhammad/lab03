@@ -8,7 +8,7 @@ public class Sorter4 {
         for (int i = 0; i < n-1; i++) {
             // Find the minimum element in unsorted array
             int minIndex = i;
-            for (int j = i+1; j < n; j++)
+            for (int j = i + 1; j < n; j++)
                 if (arr[j] < arr[minIndex])
                     minIndex = j;
 
@@ -17,33 +17,24 @@ public class Sorter4 {
             arr[minIndex] = arr[i];
             arr[i] = temp;
         }
-     public static void insertionSort(int[] arr) {
-         int n = arr.length;
-         for (int i = 1; i < n; ++i) {
-             int key = arr[i];
-             int j = i - 1;
 
-             while (j >= 0 && arr[j] > key) {
-                 arr[j + 1] = arr[j];
-                 j = j - 1;
-             }
-
-             arr[j + 1] = key;
-         }
      }
-     public static void insertionSort(int[] arr) {
-         int n = arr.length;
-         for (int i = 1; i < n; ++i) {
-             int key = arr[i];
-             int j = i - 1;
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i - 1;
 
-             while (j >= 0 && arr[j] > key) {
-                 arr[j + 1] = arr[j];
-                 j = j - 1;
-             }
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
 
-             arr[j + 1] = key;
-         }
-     }
+            arr[j + 1] = key;
+        }
+    }
+    public static void Sort(int[] array){
+        insertionSort(array)
     }
 }
+
