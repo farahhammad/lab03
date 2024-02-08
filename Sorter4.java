@@ -23,28 +23,30 @@ public class Sorter4 {
 
 
 
-    public static void Sort(int[] array){
+    public static void Sort1(int[] array){
         selectionSort(array);
     }
 
+    public static void Sort2(int[] array){
+        insertionSort(array);
+    }
 
-        
-public static void insertionSort(int[] arr) {
+
+
+    public static void insertionSort(int[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
-        int key = arr[i];
-        int j = i - 1;
+            int key = arr[i];
+            int j = i - 1;
 
-        while (j >= 0 && arr[j] > key) {
-        arr[j + 1] = arr[j];
-        j = j - 1;
-        }
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
 
-        arr[j + 1] = key;
+            arr[j + 1] = key;
         }
-        }
+    }
 
 }
         
-
-
